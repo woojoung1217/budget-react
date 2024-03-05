@@ -3,16 +3,16 @@ import { LiaEdit } from "react-icons/lia";
 import { MdDeleteForever } from "react-icons/md";
 import "./expenseitem.css"
 
-export default function ExpenseItem({ item, handleDelete }) {
+export default function ExpenseItem() {
 
-  let formattedAmount = new Intl.NumberFormat('ko-KR', { style: 'decimal' }).format(item.amount)
+
   return (
     <li className='item'>
       <div className='info'>
 
 
-        <span className='amount'>{item.charge}</span>
-        <span className='expense'>{formattedAmount} 원</span>
+        <span className='amount'>아이템</span>
+        <span className='expense'>1000원</span>
 
 
       </div>
@@ -22,9 +22,6 @@ export default function ExpenseItem({ item, handleDelete }) {
           <LiaEdit />
         </button>
         <button className='clear-btn'
-          onClick={() => {
-            handleDelete(item.id)
-          }}
         >
           {/* delete-icons */}
           <MdDeleteForever />

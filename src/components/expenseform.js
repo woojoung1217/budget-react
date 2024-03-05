@@ -20,10 +20,13 @@ export default function ExpenseForm() {
             placeholder='예)렌트비'
 
           />
+
         </div>
 
         <div className='form-group'>
+
           <label htmlFor='amount'>비용</label>
+
           <input
             type='number'
             className="form-control"
